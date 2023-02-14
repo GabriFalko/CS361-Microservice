@@ -1,0 +1,23 @@
+{
+  "name": "cs361-microservice",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "run index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GabriFalko/CS361-Microservice.git"
+  },
+  "author": "Gabriele Falchini",
+  "license": "UNLICENCED",
+  "bugs": {
+    "url": "https://github.com/GabriFalko/CS361-Microservice/issues"
+  },
+  "homepage": "https://github.com/GabriFalko/CS361-Microservice#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
