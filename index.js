@@ -35,7 +35,7 @@ app.get('/highScore', (req, res) => {               // URI returns highestScorer
 
 app.get('/highScore/:pos', (req, res) => {          // URI for specific player, returns name and score, given position (pos)
     const { pos } = req.params
-    const player = highScores[pos]
+    const player = highScores[pos - 1]              // fixed pos issue, so now 1st place = 1 and 0 doesn't exist
     if(!player){
         res.status(409).send({ message: "The entered position doesn't exist!" })
     }
