@@ -36,11 +36,11 @@ app.get('/highScore', (req, res) => {               // URI returns highestScorer
 app.get('/highScore/:pos', (req, res) => {          // URI for specific player, returns name and score, given position (pos)
     const { pos } = req.params
     const player = highScores[pos]
-    const name = player.name
-    const score = player.score
     if(!player){
         res.status(409).send({ message: "The entered position doesn't exist!" })
     }
+    const name = player.name
+    const score = player.score
     res.status(201).send({ 
         name: name,
         score: score
@@ -64,6 +64,6 @@ app.post('/highScore', (req, res) =>{               // URI to save a highscore g
         res.status(505).send({ message : 'New player could not be added'} )
     } else       
     res.status(202).send({ message : 'Player '+name+' was succesfully added with highscore of '+score }) // just a confermation message
-   // console.log(highScores)    // optional step to watch how the array of highscores fluctuates
+    // console.log(highScores)    // optional step to watch how the array of highscores fluctuates
 })
 
