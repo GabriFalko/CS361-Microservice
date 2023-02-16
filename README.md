@@ -8,7 +8,7 @@ Microservice for sending and retreving highestScore for a game application.
 - Example to retreive highest score, as http request: `GET http://localhost:[port]/highScore`
     - In JavaScript: `fetch("http://localhost:[port]/highScore");`
 
-The http request returns content-type `.json` if successful. If not successful, returns `{  message: 'the specific error' }` with status code `419`
+The http request returns content-type `.json` if successful. If not successful, returns `{  message: 'the specific error' }`
 
 1. Example to send new score and name, as http request:
 
