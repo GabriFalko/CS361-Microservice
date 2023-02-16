@@ -24,7 +24,7 @@ The http request returns content-type `.json` if successful. If not successful, 
 
 ### UML Sequence Diagram:
 
-![UML Sequence Diagram] <img width="778" alt="Screen Shot 2023-02-15 at 8 21 25 PM" src="https://user-images.githubusercontent.com/115046607/219267913-5bb4e503-6fcd-4e2d-b693-5c86e975bd0b.png">
+<img width="778" alt="Screen Shot 2023-02-15 at 8 21 25 PM" src="https://user-images.githubusercontent.com/115046607/219267913-5bb4e503-6fcd-4e2d-b693-5c86e975bd0b.png">
 
 ## Running the microservice (Server Code):
 To run on your own server:
