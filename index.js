@@ -1,9 +1,8 @@
-
 const express = require('express')
 const app = express()
 const PORT = 3000
 
-app.use( express.json() )                             // add middleware to convert body of request to json
+app.use( express.json() )                           // add middleware to convert body of request to json
 
 app.listen(
     PORT,
@@ -12,9 +11,9 @@ app.listen(
 
 const MAX_SCORES = 10                               // set maximum number of sorted players in array 
 const highScores = [{
-    name: '',
+    name: 'Gabriele',                               // can be an empty string
     score: 0
-}]                               // an array that will hold top scorers in order
+}]                                                  // an array that will hold top scorers in order
 
 // updates 'newest' highestScorer's score (int) and corresponding name (string) + adds and sorts new player into highScores array.
 function updateHighScores(newPlayer){   
@@ -48,7 +47,7 @@ app.get('/highScore/:pos', (req, res) => {          // URI for specific player, 
      })
 })
 
-app.post('/highScore', (req, res) =>{              // URI to save a highscore given a player's data { name, score }
+app.post('/highScore', (req, res) =>{               // URI to save a highscore given a player's data { name, score }
     const { name } = req.body
     const { score } = req.body
     if(!name){                                      // check that a name exists
@@ -61,7 +60,7 @@ app.post('/highScore', (req, res) =>{              // URI to save a highscore gi
         name: name,
         score: score
     }
-    if(!updateHighScores(newplayer) == 0 ){         // check newPlayer was added succesfully
+    if(!updateHighScores(newplayer) == 0  ){        // check newPlayer was added succesfully
         res.status(505).send({ message : 'New player could not be added'} )
     } else       
     res.status(202).send({ message : 'Player '+name+' was succesfully added with highscore of '+score }) // just a confermation message
